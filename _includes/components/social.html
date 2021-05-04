@@ -1,0 +1,120 @@
+<p>
+
+</p>
+<div class="level is-mobile made-with">
+    <div class="level-item">
+        <a href="{{ "/feed.xml" | relative_url }}">
+            <i class="lin-icon-rss"></i>
+        </a>
+    </div>
+    {% if site.github_username %}
+    <div class="level-item">
+        <a href="https://github.com/{{ site.github_username }}">
+            <i class="lin-icon-github"></i>
+        </a>
+    </div>
+
+    {% endif %}
+    {% if site.gitlab_username %}
+    <div class="level-item">
+        <a href="https://gitlab.com/{{ site.gitlab_username }}">
+            <i class="lin-icon-gitlab"></i>
+        </a>
+    </div>
+    {% endif %}
+    {% if site.twitter_username %}
+    <div class="level-item">
+        <a href="https://twitter.com/{{ site.twitter_username }}">
+            <i class="lin-icon-twitter"></i>
+        </a>
+    </div>
+    {% endif %}
+    {% if site.linkedin_username %}
+    <div class="level-item">
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+            <i class="lin-icon-linkedin"></i>
+        </a>
+    </div>
+    {% endif %}
+
+    {% if site.instagram_username %}
+    <div class="level-item">
+        <a href="https://www.instagram.com/{{ site.instagram_username }}">
+            <i class="lin-icon-instagram"></i>
+        </a>
+    </div>
+    {% endif %}
+
+     {% if site.facebook_username %}
+    <div class="level-item">
+        <a href="https://www.facebook.com/{{ site.facebook_username }}">
+            <i class="lin-icon-facebook"></i>
+        </a>
+    </div>
+    {% endif %}
+
+    {% if site.pinterest_username %}
+    <div class="level-item">
+        <a href="https://www.pinterest.com/{{ site.pinterest_username }}">
+            <i class="lin-icon-pinterest"></i>
+        </a>
+    </div>
+    {% endif %}
+
+     {% if site.youtube_username %}
+    <div class="level-item">
+        <a href="https://www.youtube.com/channel/{{ site.youtube_username }}">
+            <i class="lin-icon-youtube"></i>
+        </a>
+    </div>
+    {% endif %}
+
+       {% if site.telegram_username %}
+    <div class="level-item">
+        <a href="https://t.me/{{ site.telegram_username }}">
+            <i class="lin-icon-telegram"></i>
+        </a>
+    </div>
+    {% endif %}
+
+     {% if site.keybase_username %}
+    <div class="level-item">
+        <a href="https://keybase.io/{{ site.keybase_username }}">
+            <i class="lin-icon-keybase"></i>
+        </a>
+    </div>
+    {% endif %}
+
+     {% if site.steam_username %}
+    <div class="level-item">
+        <a href="https://steamcommunity.com/id/{{ site.steam_username }}">
+            <i class="lin-icon-steam"></i>
+        </a>
+    </div>
+    {% endif %}
+
+    {% if site.vk_username %}
+    <div class="level-item">
+        <a href="https://vk.com/{{ site.vk_username }}">
+            <i class="lin-icon-vk"></i>
+        </a>
+    </div>
+    {% endif %}
+
+    {% if site.twitch_username %}
+    <div class="level-item">
+        <a href="https://twitch.com/{{ site.twitch_username }}">
+            <i class="lin-icon-twitch"></i>
+        </a>
+    </div>
+    {% endif %}
+  {% if site.snapchat_username %}
+    <div class="level-item">
+        <a href="https://www.snapchat.com/add/{{ site.snapchat_username }}">
+            <i class="lin-icon-snapchat"></i>
+        </a>
+    </div>
+    {% endif %}
+
+</div>
+<p>&copy; Copyright {{ site.time | date: "%Y" }} {{ site.author }}</p>

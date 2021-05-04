@@ -1,0 +1,119 @@
+title: Yücel Toluyağ
+email: adamcoder@gmail.com
+description: >-
+  Bilgi beş harflidir, beşte dörtü ilgi'dir.
+baseurl: ""
+url: "https://yuceltoluyag.github.io"
+lang: "tr"
+index_url: /posts
+# About/contact
+author:
+name: adamcoder
+#url: http://yuceltoluyag.github.io
+repo_url: https://github.com/yuceltoluyag/yuceltoluyag.github.io
+########
+# Blog #
+########
+strict_front_matter: true
+enable-gesture-navigation: True
+post-preview-words: 96
+paginate: 5
+mailchimp-list: https://feedburner.google.com/fb/a/mailverify?uri=yuceltoluyag
+# Read More
+show_excerpts: true # set to true to show excerpts on the homepage
+excerpt_separator: <!-- excerpt separator -->
+paginate: 5
+paginate_path: "/page/:num"
+
+#Seo
+webmaster_verifications:
+  google: ob8_FqKQlIxhp5eRJIvaR-bbkV_6kD7D9l_0TkzxMqc
+  #yandex: xx
+google:
+  tag_manager:
+    container_id: GTM-PHW52JF
+
+google_analytics:
+  UA-156927338-1
+#ya_metrika: 49475860
+#compile
+reload_port: 5678
+username: yuceltoluyag
+repo: yuceltoluyag.github.io
+branch: master
+
+# Social
+twitter:
+  username: Friday13Jv
+  card: summary
+github_username: yuceltoluyag
+gitlab_username: friday13
+twitter_username: Friday13Jv
+linkedin_username: yuceltoluyag
+instagram_username: yuceltoluyag
+telegram_username: adamcoder
+youtube_username: UCJyK4D5BcoPXjV5T8N8-liA?sub_confirmation=1
+facebook_username: toluyagyucel
+pinterest_username: bunediobu
+keybase_username: friday13
+steam_username: sansaslark
+vk_username: id592059164
+twitch_username: yuceltoluyag
+snapchat_username: yuceltoluyag
+rss: /feed.xml
+disqus:
+    shortname: "yuceltoluyag"
+
+
+# Jekyll source / destination
+source: .
+destination: _site
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink: '/:title/'
+date_format: "%d.%m.%Y"
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugin settings
+jekyll-groupby:
+  permalink: ":group/:name.html"
+  groups:
+    - name: "series"
+      layout: "group"
+    - name: "category"
+      layout: "group"
+    - name: "tags"
+      layout: "group"
+
+collections:
+  artwork:
+    output: true
+
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-mentions
+  - jekyll-octicons
+
+exclude:
+  - node_modules
+  - gulpfile.babel.js
+  - package.json
+  - sass
+  - js
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .cache

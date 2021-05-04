@@ -1,0 +1,47 @@
+<script>
+  var posts = [
+    {% for post in site.posts %}
+      {
+        url: '{{ site.baseurl }}{{ post.url }}',
+        title: '{{ post.title | remove: "&lt;" | remove: "&gt;" | escape }}'
+      },
+    {% endfor %}
+  ];
+</script>
+
+{% if site.google_analytics %}
+<script
+  src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js"
+  async
+></script>
+<script>
+  var galite = galite || {};
+  galite.UA = "{{ site.google_analytics }}";
+</script>
+{% endif %}
+
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-PHW52JF");
+</script>
+<!-- End Google Tag Manager -->
+
+<script
+  data-ad-client="ca-pub-6089943780218266"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+<script src="/public/assets/app.js"></script>

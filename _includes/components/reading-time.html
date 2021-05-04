@@ -1,0 +1,6 @@
+{% assign words = page.content | strip_html | split: ' ' | size %} {% assign
+minutes = words | divided_by: 180.0 | round %} {% if minutes == 1 %} {% assign
+minutes_label = "dakika" %} {% else %} {% assign minutes_label = "dakika" %} {%
+endif %} {% if minutes > 0 %} Bu makalenin okunması {{ minutes }} {{
+minutes_label }} dakika sürecektir.. {% else %} Bu makalenin okunması 1
+dakikadan daha az sürecektir. {% endif %}

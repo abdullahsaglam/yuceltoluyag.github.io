@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "MarvinVisions";
+  src: url("../public/fonts/MarvinVisions-Bold.eot");
+  src: url("../public/fonts/MarvinVisions-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/MarvinVisions-Bold.woff2") format("woff2"),
+    url("../public/fonts/MarvinVisions-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@mixin marvin {
+  font-family: MarvinVisions, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+// Merriweather
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../public/fonts/Merriweather-Regular.eot");
+  src: url("../public/fonts/Merriweather-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Merriweather-Regular.woff2") format("woff2"),
+    url("../public/fonts/Merriweather-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../public/fonts/Merriweather-Bold.eot");
+  src: url("../public/fonts/Merriweather-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Merriweather-Bold.woff2") format("woff2"),
+    url("../public/fonts/Merriweather-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../public/fonts/Merriweather-Light.eot");
+  src: url("../public/fonts/Merriweather-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Merriweather-Light.woff2") format("woff2"),
+    url("../public/fonts/Merriweather-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Lato
+
+@font-face {
+  font-family: "Lato";
+  src: url("../public/fonts/Lato-Regular.eot");
+  src: url("../public/fonts/Lato-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Lato-Regular.woff2") format("woff2"),
+    url("../public/fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Sans
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../public/fonts/OpenSans-Regular.eot");
+  src: url("../public/fonts/OpenSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../public/fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Lin
+@font-face {
+  font-family: "lin-icons";
+  src: url("../public/fonts/lin-icons.eot?cvphkp");
+  src: url("../public/fonts/lin-icons.eot?cvphkp#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/lin-icons.ttf?cvphkp") format("truetype"),
+    url("../public/fonts/lin-icons.woff?cvphkp") format("woff"),
+    url("../public/fonts/lin-icons.svg?cvphkp#lin-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

@@ -1,0 +1,45 @@
+{% comment %} This template expects the following variables to be defined when
+including it: - post: A reference to the Jekyll post variable. {% endcomment %}
+
+<article class="media">
+  <div class="media-content">
+    {% if include.post.featured-image %}
+    <div class="columns">
+      <div class="column is-one-quarter"></div>
+      <div class="column">
+        {% endif %}
+        <div class="content">
+          <div class="level">
+            <div class="level-left">
+              <div class="level-item">
+                <div class="wrapper">
+                  <p class="title is-4">
+                    <a href="{{ post.url | relative_url }}">
+                      {{ post.title | escape }}
+                    </a>
+                  </p>
+                  <p class="subtitle is-6">
+                    {{ post.date | date: "%d.%m.%Y" }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="level-right">
+              <div class="level-item">
+                <div class="tags">
+                  {% include components/gen-badge.html list=post.categories
+                  prepend_url="/category/" class="is-info" %} {% include
+                  components/gen-badge.html list=post.tags prepend_url="/tags/"
+                  class="is-light" limit=3 %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-excerpt">{{ post.excerpt }}</div>
+        </div>
+        {% if include.post.featured-image %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</article>

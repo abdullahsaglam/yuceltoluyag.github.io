@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<article class="post">
+  <section class="post-header">
+    <div class="level">
+      <div class="level-left">
+        <header class="post-title">
+          <p class="title is-3 has-text-primary">{{ page.title | escape }}</p>
+          <p class="subtitle is-5">{{ page.date | date: "%B %-d, %Y" }}</p>
+          <p class="subtitle is-5">
+            {% include components/reading-time.html %}
+          </p>
+        </header>
+      </div>
+      <div class="level-right">
+        <div class="tags">
+          {% include components/gen-badge.html list=page.tags
+          prepend_url="/tags/" class="is-light" %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  {% if page.series %} {% include components/series-header.html %} {% endif %}
+
+  <section class="post-content">
+    {% if page.featured-image %}
+    <div class="content">
+      {% include components/featured-image.html post=page %}
+    </div>
+    {% endif %}
+    <div class="content has-pulled-children">
+      {% include google-adsense.html %} {{ content }} {% include
+      google-adsense.html %} {% include share.html %}
+    </div>
+  </section>
+
+  {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%} {%-
+  endif -%} {% if page.series %} {% include components/series-footer.html %} {%
+  endif %}
+</article>

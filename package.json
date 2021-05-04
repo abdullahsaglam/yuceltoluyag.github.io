@@ -1,0 +1,27 @@
+{
+  "name": "yucel-blog",
+  "author": "adamcoder",
+  "scripts": {
+    "build-assets": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
+    "watch-assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
+    "jekyll-serve": "bundle exec jekyll serve --incremental --livereload --host 127.0.0.1",
+    "jekyll-build": "rm -rf _site && bundle exec jekyll build",
+    "start": "rm -rf _site && npm run build-assets && npm run jekyll-serve"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "autoprefixer": "^9.8.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.1"
+  },
+  "dependencies": {
+    "animated-scroll-to": "^2.2.0",
+    "window-scroll-manager": "^1.1.4"
+  }
+}

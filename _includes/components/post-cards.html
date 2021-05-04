@@ -1,0 +1,24 @@
+{% for post in site.posts %}
+<div class="card">
+    <div class="card-content">
+        <a href="{{ post.url | relative_url }}">
+            <p class="title is-4 has-text-info">
+                {{ post.title }}
+            </p>
+        </a>
+        <p class="subtitle is-6">
+            {{ post.date | date: "%Y-%m-%d" }}
+        </p>
+        <p class="content">
+            {% include components/gen-badge.html
+                list=post.categories
+                prepend_url="/category/"
+                class="is-info" %}
+            {% include components/gen-badge.html
+                list=post.tags
+                prepend_url="/tags/"
+                class="is-light" %}
+        </p>
+    </div>
+</div>
+{% endfor %}

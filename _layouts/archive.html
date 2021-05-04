@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html
+  class="has-navbar-fixed-top"
+  lang="{{ page.lang | default: site.lang | default: 'en'}}"
+>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+
+    <section class="section">
+      <div class="container">
+        {% if layout.menu %}
+        <div class="columns">
+          <div class="column is-narrow">{% include components/menu.html %}</div>
+          <div class="column">
+            {% endif %}
+            <main class="page-content" aria-label="Content">
+              <div class="wrapper Content">{{ content }}</div>
+            </main>
+            {% if layout.menu %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+    {% include components/search-modal.html %} {% include
+    components/scripts.html %} {% include footer.html %}
+  </body>
+</html>

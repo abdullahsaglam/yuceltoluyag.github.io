@@ -1,0 +1,40 @@
+<header>
+    <nav class="navbar is-fixed-top navigar" role="navigation"
+         aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand MenuModal-menu">
+                <a href="{{ "/" | relative_url }}" class="navbar-item">
+                    <img src="/public/img/logo.jpg" alt="{{ site.logo_alt }}">
+                </a>
+                <div class="navbar-burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+           <div id="navMenu" class="navbar-menu Container">
+                <div class="navbar-start">
+                    <p class="button is-light">{{ site.description }}</p>
+                </div>
+                <div class="navbar-end">
+                    {% if page.url != '/' %}
+          <a class="navbar-item" href="{{ site.baseurl }}/">Anasayfa</a> <span aria-hidden="true"></span>
+          {% endif %}
+          {% assign pages_list = site.pages | sort: "url" %}
+          {% for node in pages_list %}
+          {% if node.title != null and (node.layout == "page" or node.layout == "archive") %}
+          <a class="navbar-item {% if page.url == node.url %}is-active{% endif %}" href="{{ node.url }}">
+            {{ node.title }}
+          </a> <span aria-hidden="true"></span>
+          {% endif %}
+          {% endfor %}
+            <button class="button  Menu-link MenuModal-toggle">
+            <div class="navbar-item Menu-linkContent">Ara {% octicon search height: 20 class: "Menu-linkIcon" aria-hidden: "hidden" %}</div>
+            </button>
+            </div>
+            </div>
+        </div>
+<div id="progress"></div>
+    </nav>
+</header>
+

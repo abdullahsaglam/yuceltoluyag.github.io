@@ -1,0 +1,21 @@
+{% assign series_page = page.series | slugify | append: ".html" %}
+
+<section class="series-header level">
+    <div class="level-left">
+    </div>
+    <div class="level-right">
+        <div class="level-item">
+            {% include svg/archive.svg %}
+        </div>
+        <div class="level-item">
+            <p class="series-header is-italic">
+                <a href="{{ series_page | prepend: "/series/" | relative_url }}"
+                    class="link-wrapper-inline">
+                    <span class="has-text-info has-text-weight-semibold">
+                        {{ page.series }} Yazı Serisi
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</section>

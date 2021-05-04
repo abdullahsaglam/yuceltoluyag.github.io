@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% comment %}
+This template works closely with the groups used by the plugin jekyll-groupby.
+{% endcomment %}
+
+<p class="title is-2 has-text-info">
+    {{ page.title }}
+</p>
+<p class="subtitle is-6">
+    {% assign num_posts = page.posts | size %}
+    {{ num_posts }}
+    {% if num_posts > 1 %}
+        posts
+    {% else %}
+        post
+    {% endif %}
+    {% if site.data[page.group].matchline %}
+        {{ site.data[page.group].matchline }}
+    {% else %}
+        in this {{ page.group }}
+    {% endif %}
+</p>
+
+{% assign group_data = site.data[page.group].items | where: "name", page.slug
+    | first %}
+{% if group_data %}
+<p class="content">
+    {{ group_data.content }}
+</p>
+<hr>
+{% endif %}
+
+<section class="posts-group">
+    {% for post in page.posts %}
+        {% include components/post-snippet.html post=post %}
+
+        {% if forloop.last == false %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+</section>

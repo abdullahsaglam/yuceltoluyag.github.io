@@ -1,0 +1,27 @@
+<footer class="footer navigar">
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(window).on("load scroll resize", function () {
+        var docHeight = $(document).height();
+        var windowPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+        var completion = windowPos / (docHeight - windowHeight);
+
+        if (docHeight <= windowHeight) {
+          $("#progress").width(windowWidth);
+        } else {
+          $("#progress").width(completion * windowWidth);
+        }
+      });
+    });
+  </script>
+  <div class="content has-text-centered">
+    {% include components/social.html %}
+  </div>
+</footer>
