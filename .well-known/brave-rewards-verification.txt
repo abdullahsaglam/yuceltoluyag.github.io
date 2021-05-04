@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: yuceltoluyag.github.io
+Token: 94cbf43043f50db5a8a2755b5b6c117564db339750a2908262c1b22f9536cf06
