@@ -10,7 +10,7 @@ module Jekyll
   # uses < > to encapsulate the psuedo post/page objects in which case
   # the output is taken for HTML tags and hidden from view.
   #
-  class Post
+  class Post < Liquid::Tag
     def inspect
       "#Jekyll:Post @id=#{self.id.inspect}"
     end
@@ -35,4 +35,4 @@ module Jekyll
   end # DebugFilter
 end # Jekyll
 
-Liquid::Template.register_filter(Jekyll::DebugFilter)
+Liquid::Template.register_filter('jekyll-debug',Jekyll::DebugFilter)
